@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body{
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: black;
+}
 .titulo {
     display: flex;
     box-sizing: border-box;
