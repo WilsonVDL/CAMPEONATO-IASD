@@ -8,10 +8,27 @@ body{
     box-sizing: border-box;
     background-color: black;
 }
-.titulo {
+.paragrafo{
+    box-sizing: border-box;
+    background-color: aqua;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.paragrafo__imagem-inicial {
+    display: flex;
+    box-sizing: border-box;
+    background-color: aqua;
+}
+.paragrafo__titulo {
     display: flex;
     box-sizing: border-box;
     background-color: aqua;
     text-align: center;
     border-radius: 5px;
+}
+
+.mensagem-inicial{
+    color: white;
+    font-size: 25px;
 }
