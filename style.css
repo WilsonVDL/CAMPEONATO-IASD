@@ -10,7 +10,6 @@ body{
 }
 .paragrafo{
     box-sizing: border-box;
-    background-color: aqua;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -18,17 +17,29 @@ body{
 .paragrafo__imagem-inicial {
     display: flex;
     box-sizing: border-box;
-    background-color: aqua;
+    width: 80px;
 }
 .paragrafo__titulo {
     display: flex;
+    justify-content: space-between;
     box-sizing: border-box;
-    background-color: aqua;
+    background-color: #134782;
     text-align: center;
-    border-radius: 5px;
+    border-bottom-right-radius: 20px;
+    padding: 0 30px 0 0;
 }
 
 .mensagem-inicial{
     color: white;
     font-size: 25px;
+}
+
+.paragrafo__titulo__botoes {
+    display: flex;
+    background-color: #134782;
+    font-size: 24px;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    padding-left: 100px;
 }
