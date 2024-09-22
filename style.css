@@ -1,45 +1,89 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
 }
 
-body{
+nav {
+    display: contents;
+}
+
+.nav-bar {
+    align-items: center;
+    display: flex;
+}
+body {
+
     height: 100vh;
-    box-sizing: border-box;
-    background-color: black;
 }
-.paragrafo{
-    box-sizing: border-box;
-    color: white;
+header {
+    justify-content:space-evenly;
     display: flex;
-    justify-content: space-between;
+    background-color: blue;
+    border-radius: 15px;
 }
-.paragrafo__imagem-inicial {
-    display: flex;
-    box-sizing: border-box;
-    width: 80px;
-}
-.paragrafo__titulo {
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    background-color: #134782;
-    text-align: center;
-    border-bottom-right-radius: 20px;
-    padding: 0 30px 0 0;
+p, label {
+    color: aliceblue;
+    font-size: 16px;
+    padding: 0 10px;
 }
 
-.mensagem-inicial{
-    color: white;
-    font-size: 25px;
-}
+nav, a {
+    color: rgb(252, 51, 36);
+    text-decoration: none;
+    transition: .2s;
+    font-size: 1.5rem;
 
-.paragrafo__titulo__botoes {
+    
+}
+nav a:hover {
+    color: rgb(110, 200, 252);
+    transform: scale(1.05);
+    background-color: aqua;
+}
+.cadastro {
     display: flex;
-    background-color: #134782;
-    font-size: 24px;
-    justify-content: space-between;
-    text-align: center;
-    border-bottom-left-radius: 20px;
-    padding-left: 100px;
+
+}
+.menu-principal {
+    
+}
+.login-menu-principal {
+    align-self: center;
+}
+.butao-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: none;
+    margin: 10px 0;
+
+    color: #fff;
+    background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+    background-origin: border-box;
+    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.butao-login:focus {
+    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+    outline: 0;
+}
+.cadastro a {
+    font-size: 16px;
+    padding: 0  ;
+}
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0 30px;
+}
+li {
+    padding: 0 20px;
 }

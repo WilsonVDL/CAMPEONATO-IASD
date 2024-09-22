@@ -5,21 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAMPEONATO IASD</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="paragrafo">
-        
-        <h1 class="paragrafo__titulo"><img class="paragrafo__imagem-inicial" src="img.png" alt="simbolo IASD">CAMPEONATO IASD</h1>
-            <div class="paragrafo__titulo__botoes">
-                <a>Inicio</a>
-                <a>Tabela</a>
-                <a>Videos</a>
-                <a>Vencedores</a>
-                <a>Votação</a>
-                <a> Login <input type="login" name="login" id="login"></a>
-                <a> Senha <input type="password" name="senha" id="senha"></a>
-            </div>
-    </main>
-    <p class="mensagem-inicial">Bem vindos ao III campeonato IASD</p>
+    <header>
+        <div class="logo-header"> 
+            <a href="#">
+                <img src="/img.png" width="93px" height="123px">
+            </a>
+        </div>
+        <div class="nav-bar">
+            <nav>
+                <div class="menu-principal">
+                    <ul>
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="">Tabela</a></li>
+                        <li><a href="">Videos</a></li>
+                        <li><a href="">Vencedores</a></li>
+                        <li><a href="">Votação</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="login-menu-principal">
+            <label for="email">E-mail:</label>
+            <input type="login" name="login" id="login">
+            <label for="pass">Senha:</label>
+            <input type="password" name="password" id="password">
+            <br>
+            <button class="butao-login">Login</button>
+            <span class="cadastro">
+                <p>Ainda nao é cadastrado ?</p>
+                <a href="#">Cadastre-se.</a>
+            </span>
+
+        </div>
+    </header>
 </body>
 </html>
