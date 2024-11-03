@@ -1,45 +1,155 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    box-sizing: border-box;
-    background-color: black;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
 }
-.paragrafo{
-    box-sizing: border-box;
-    color: white;
+
+.cabecalho {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-}
-.paragrafo__imagem-inicial {
-    display: flex;
-    box-sizing: border-box;
-    width: 80px;
-}
-.paragrafo__titulo {
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
     background-color: #134782;
-    text-align: center;
-    border-bottom-right-radius: 20px;
-    padding: 0 30px 0 0;
-}
-
-.mensagem-inicial{
     color: white;
-    font-size: 25px;
+    padding: 10px 20px;
 }
 
-.paragrafo__titulo__botoes {
+.cabecalho__logo-titulo {
     display: flex;
-    background-color: #134782;
+    align-items: center;
+    gap: 10px;
+}
+
+.cabecalho__logo {
+    width: 50px;
+}
+
+.cabecalho__titulo {
     font-size: 24px;
-    justify-content: space-between;
+}
+
+.cabecalho__navegacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cabecalho__navegacao a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.cabecalho__navegacao input {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.botao {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.conteudo {
+    padding: 20px;
+}
+
+/* Estilo da seção de times participantes */
+.times-participantes {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin-bottom: 20px; 
+}
+
+.time {
+    background-color: #742222;
+    color: white;
+    width: 150px; 
+    height: 100px;
+    margin: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s; 
+}
+
+.time:hover {
+    transform: scale(1.05); 
+}
+
+/* Estilo da seção de jogos */
+.jogos {
     text-align: center;
-    border-bottom-left-radius: 20px;
-    padding-left: 100px;
+    overflow-x: auto; 
+    padding: 20px; 
+}
+
+.jogos h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.jogo {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.jogo span {
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column; /* Coloca logo e título acima da navegação */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .cabecalho__logo-titulo {
+        margin-bottom: 10px; /* Espaço abaixo do título */
+    }
+
+    .cabecalho__navegacao {
+        flex-direction: column; /* Alinha os links verticalmente */
+        align-items: center; /* Centraliza os links */
+        gap: 5px; /* Espaçamento entre os links */
+    }
+
+    .cabecalho__logo {
+        width: 40px; /* Reduz a largura da logo */
+    }
+
+    .cabecalho__titulo {
+        font-size: 20px; /* Reduz o tamanho do título */
+    }
+
+    .time {
+        width: 90%; 
+        max-width: 300px; 
+        font-size: 18px; 
+    }
+
+    .jogo {
+        font-size: 20px; 
+    }
+
+    .jogos {
+        padding: 10px; 
+    }
 }
