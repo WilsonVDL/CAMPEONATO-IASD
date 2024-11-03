@@ -114,6 +114,46 @@ body {
     margin: 0 10px;
 }
 
+/* Estilo da tabela */
+.tabela {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco para destacar a tabela */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.tabela h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #134782; /* Cor do título */
+}
+
+#tabela-classificacao {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabela-classificacao th, #tabela-classificacao td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Aumenta o padding para mais espaçamento */
+    text-align: center;
+}
+
+#tabela-classificacao th {
+    background-color: #134782;
+    color: white;
+    font-weight: bold;
+}
+
+#tabela-classificacao tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fundo cinza claro para linhas pares */
+}
+
+#tabela-classificacao tr:hover {
+    background-color: #e0e0e0; /* Destacar linha ao passar o mouse */
+}
+
 /* Ajustes para telas pequenas */
 @media (max-width: 600px) {
     .cabecalho {
@@ -152,4 +192,18 @@ body {
     .jogos {
         padding: 10px; 
     }
+    
+    .tabela {
+        padding: 10px; /* Reduz o padding em telas pequenas */
+    }
+    
+    #tabela-classificacao th, #tabela-classificacao td {
+        padding: 8px; /* Reduz o padding nas células */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+    
+    #tabela-classificacao h2 {
+        font-size: 20px; /* Ajusta o tamanho do título */
+    }
 }
+
