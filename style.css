@@ -1,12 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --primaria:  linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --font-color: #d8dee2;
+    --tabela: #053a6e;
+    --tabela2: #2968b1;
+    --font-tabela: #c97f0f;
+    --fonte-style: "Montserrat", sans-serif;
+}
+ 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--fonte-style);
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: var(--fonte-style);
+    background-image: var(--primaria);
     color: #333;
 }
 
@@ -14,8 +28,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #134782;
-    color: white;
+    background-image: var(--azul-degrade);
+    background-repeat: no-repeat;
+    color: var(--font-color);
     padding: 10px 20px;
 }
 
@@ -30,7 +45,7 @@ body {
 }
 
 .cabecalho__titulo {
-    font-size: 24px;
+    font-size: 40px;
 }
 
 .cabecalho__navegacao {
@@ -40,10 +55,11 @@ body {
 }
 
 .cabecalho__navegacao a {
-    color: white;
+    color: var(--font-color);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 32px;
     padding: 5px;
+    font-weight: 500;
 }
 
 .cabecalho__navegacao input {
@@ -53,7 +69,7 @@ body {
 
 .botao {
     background-color: #007BFF;
-    color: white;
+    color: var(--font-color);
     padding: 8px 12px;
     border: none;
     border-radius: 4px;
@@ -65,7 +81,6 @@ body {
     padding: 20px;
 }
 
-/* Estilo da seção de times participantes */
 .times-participantes {
     display: flex; 
     flex-wrap: wrap; 
@@ -75,7 +90,7 @@ body {
 
 .time {
     background-color: #742222;
-    color: white;
+    color: var(--font-color);
     width: 180px; 
     height: 180px;
     margin: 10px;
@@ -84,7 +99,6 @@ body {
     justify-content: center;
     flex-direction: column;
     font-size: 10px;
-    color: white;
     border-radius: 8px;
     transition: transform 0.2s;
     gap: 10px;
@@ -101,7 +115,6 @@ body {
     transform: scale(1.05); 
 }
 
-/* Estilo da seção de jogos */
 .jogos {
     text-align: center;
     overflow-x: auto; 
@@ -124,19 +137,20 @@ body {
     margin: 0 10px;
 }
 
-/* Estilo da tabela */
 .tabela {
     text-align: center;
     padding: 20px;
-    background-color: #ffffff; /* Fundo branco para destacar a tabela */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: var(--tabela); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--font-tabela);
+    font-weight: 600;
 }
 
 .tabela h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #134782; /* Cor do título */
+    color: var(--tabela2);
 }
 
 #tabela-classificacao {
@@ -146,47 +160,47 @@ body {
 
 #tabela-classificacao th, #tabela-classificacao td {
     border: 1px solid #ddd;
-    padding: 12px; /* Aumenta o padding para mais espaçamento */
+    padding: 12px;
     text-align: center;
 }
 
 #tabela-classificacao th {
-    background-color: #134782;
+    background-color: var(--tabela2);
     color: white;
     font-weight: bold;
 }
 
 #tabela-classificacao tr:nth-child(even) {
-    background-color: #f2f2f2; /* Fundo cinza claro para linhas pares */
+    background-color: var(--tabela2);
 }
 
 #tabela-classificacao tr:hover {
-    background-color: #e0e0e0; /* Destacar linha ao passar o mouse */
+    background-color: #333;
 }
 
-/* Ajustes para telas pequenas */
+
 @media (max-width: 600px) {
     .cabecalho {
-        flex-direction: column; /* Coloca logo e título acima da navegação */
-        align-items: center; /* Centraliza os itens */
+        flex-direction: column;
+        align-items: center; 
     }
 
     .cabecalho__logo-titulo {
-        margin-bottom: 10px; /* Espaço abaixo do título */
+        margin-bottom: 10px;
     }
 
     .cabecalho__navegacao {
-        flex-direction: column; /* Alinha os links verticalmente */
-        align-items: center; /* Centraliza os links */
-        gap: 5px; /* Espaçamento entre os links */
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
     }
 
     .cabecalho__logo {
-        width: 40px; /* Reduz a largura da logo */
+        width: 40px;
     }
 
     .cabecalho__titulo {
-        font-size: 20px; /* Reduz o tamanho do título */
+        font-size: 20px;
     }
 
     .time { 
@@ -203,16 +217,15 @@ body {
     }
     
     .tabela {
-        padding: 10px; /* Reduz o padding em telas pequenas */
+        padding: 10px;
     }
     
     #tabela-classificacao th, #tabela-classificacao td {
-        padding: 8px; /* Reduz o padding nas células */
-        font-size: 14px; /* Reduz o tamanho da fonte */
+        padding: 8px; 
+        font-size: 14px; 
     }
     
     #tabela-classificacao h2 {
-        font-size: 20px; /* Ajusta o tamanho do título */
+        font-size: 20px;
     }
 }
-
