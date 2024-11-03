@@ -8,6 +8,9 @@
     --tabela2: #2968b1;
     --font-tabela: #c97f0f;
     --fonte-style: "Montserrat", sans-serif;
+    --azul-botao: #007BFF;
+    --azul-botao-hover: #0056b3;
+    --cor-texto-branco: white;
 }
  
 
@@ -60,6 +63,10 @@ body {
     font-size: 32px;
     padding: 5px;
     font-weight: 500;
+}
+
+.cabecalho__navegacao a:hover {
+    background-color: var(--primaria); /* Altera a cor no hover */
 }
 
 .cabecalho__navegacao input {
@@ -193,6 +200,16 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 5px;
+        background-color: none;
+    }
+    
+    .cabecalho__navegacao a {
+        background-color: var(--azul-botao); 
+        color: var(--cor-texto-branco);
+        padding: 10px 15px;
+        border-radius: 8px; 
+        text-align: center;
+        width: 100%;
     }
 
     .cabecalho__logo {
@@ -227,5 +244,24 @@ body {
     
     #tabela-classificacao h2 {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 412px) {
+    .tabela {
+        overflow-x: auto;
+    }
+    
+    #tabela-classificacao {
+        width: 100%;
+    }
+    
+    #tabela-classificacao th, #tabela-classificacao td {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .cabecalho__titulo {
+        font-size: 16px;
     }
 }
