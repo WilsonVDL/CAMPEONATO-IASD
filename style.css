@@ -197,19 +197,22 @@ body {
     }
 
     .cabecalho__navegacao {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
         gap: 5px;
+        flex-wrap: wrap;
         background-color: none;
     }
     
     .cabecalho__navegacao a {
         background-color: var(--azul-botao); 
         color: var(--cor-texto-branco);
-        padding: 10px 15px;
+        padding: 8px 12px;
+        margin: 2px;
+        flex: 1;
         border-radius: 8px; 
         text-align: center;
         width: 100%;
+        font-size: 12px;
     }
 
     .cabecalho__logo {
